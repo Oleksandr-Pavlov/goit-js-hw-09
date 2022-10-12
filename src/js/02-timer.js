@@ -35,13 +35,10 @@ const refs = {
   seconds: document.querySelector('span[data-seconds]'),
 };
 
-refs.input.addEventListener('click', onInputClick)
 refs.startBtn.addEventListener('click', onStartBtnClick)
 refs.startBtn.disabled = true;
 
-function onInputClick() {
-  const pickr = new flatpickr('#datetime-picker', flatpickrOptions);
-}
+flatpickr('#datetime-picker', flatpickrOptions);
 
 function onStartBtnClick() {
   const timerId = setInterval(() => {
